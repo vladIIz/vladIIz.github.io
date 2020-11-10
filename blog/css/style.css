@@ -1,0 +1,401 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+
+    /* font families */
+
+@font-face{
+    
+    font-family:'Opensans';
+    src:url(../fonts/sans-serif/opensans-regular.ttf) format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face{
+    
+    font-family:'Roboto';
+    src:url(../fonts/sans-serif/roboto-regular.ttf) format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face{
+
+font-family:'Montserrat';
+src:url(../fonts/sans-serif/montserrat-regular.ttf) format ('truetype');
+font-weight:normal;
+font-style:normal;
+}
+
+
+@font-face{
+    
+    font-family:'Ultra';
+    src:url(../fonts/serif/ultra-regular.ttf) format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face{
+    
+    font-family:'Rozhaone';
+    src:url(../fonts/serif/rozhaone-regular.ttf) format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
+    /* general style */
+
+html{
+    
+  font-family:'Montserrat', sans-serif;
+  font-size:1.2rem;
+  color:#282929;
+}
+
+article{
+
+  float: left;
+  width: 70%;
+
+}
+
+aside{
+
+  float: right;
+  width: 25%;  
+}
+
+/* heading style */
+
+h1{
+
+  font-family:'Roboto', sans-serif;
+  font-size:3rem;
+  color:#333333;
+  text-shadow: 0.1rem 0.1rem 0.20rem #262626;
+  letter-spacing:0.1rem;
+  transform:rotate(-5deg);
+  text-align:center;
+  padding-bottom:4rem;
+  margin-top:3rem;
+}
+
+  .highlight{
+
+  font-family:'Ultra', serif;
+  font-size:3.5rem;
+  font-weight:100;
+  color:#ededde;
+  background-color:#862d59;
+  letter-spacing:0.35rem;
+
+
+    /* box around text */
+
+  padding: 0rem 1rem 0rem 1rem;
+  border:solid;
+  border-color:#862d59;
+  border-radius:0.8rem 0rem 0.8rem 0rem;
+  box-shadow:0.2rem 0.2rem 0.20rem #262626;
+  text-transform:uppercase;
+}
+
+
+h2{
+
+  font-family:'Roboto';
+  margin-left:4rem;
+  color:#282929;
+  font-weight:600;
+  font-size:1.5rem;
+  margin:2rem 0rem 0.5rem 4rem;
+}
+
+h3{
+
+  font-family:'Roboto';
+  margin-left:4rem;
+  color:#282929;
+  font-family:'Montserrat', sans-serif;
+  font-size:1rem;
+}
+
+    /* paragraphs */
+
+p{
+      
+  margin:0rem 0rem 1rem 4rem;
+  line-height: 1.5;
+}
+
+    /* navigation bar */
+
+nav{
+
+  display:flex;
+  font-family:'Roboto', sans-serif;
+  font-weight:600;
+  line-height:3;
+  font-size:1.5rem;
+  text-decoration:none;
+  margin:1rem 0rem 4rem 0rem;
+    
+    /* line */   
+    
+  border:solid;
+  border-color:#333333;
+  border-width:0.1rem 0rem 0.1rem 0rem;
+}
+
+nav a{
+    
+  margin-left:4rem;
+  text-decoration:none;
+  padding-right:2rem;
+  color:#293a63;
+}
+
+.blog{
+
+  padding-top:0.35rem;
+  transform: rotate(5deg);
+  color:black;
+  font-size:1.25rem;
+  text-transform:uppercase;
+  text-decoration:line-through;
+}
+
+    /* time */
+
+time{
+
+  font-size:0.75rem;
+  text-align:left;
+  font-family:'Opensans', sans-serif;
+  font-style:italic;
+  color:#333333;
+  margin-left:4rem;
+}
+
+
+    /* styling for images */
+
+
+      /* top image */
+
+.article-image{
+
+  width:22rem;
+  float:left;
+  margin:0rem 1rem 1rem 4rem;
+  
+}
+
+/* images */
+
+figure{
+
+  margin:0rem;
+}
+
+.subsection{
+    
+  margin:2rem 0rem 3rem 4rem;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap:0.5rem;
+  justify-content:space-between;
+}
+
+figure img{
+    
+    max-width:100%;
+    vertical-align: top;
+}
+
+figcaption{
+    
+  font-size:0.65rem;
+  color:#282929;
+  background:#ededde; 
+  padding:0.5rem;
+  background-size:auto;
+    
+}
+
+
+    /* button */
+
+button{
+
+    
+  font-family: 'Ultra', serif;
+  font-size:1.5rem;
+  color:#ededde; 
+  text-transform:uppercase;
+  margin:3rem 0rem 6rem 4rem;
+    
+    /* button background */
+  
+  border:0;
+  background-color:#204060; 
+  border-radius:0.6rem;
+  padding:1rem;
+  box-shadow:0.15rem 0.15rem 0.35rem #282929;
+}
+
+    /* aside style */ 
+
+aside{
+
+  border:solid;
+  border-color:#333333;
+  border-width:0rem 0rem 0rem 0.1rem;
+  margin:0rem 3rem 3rem 0rem;
+}
+
+aside > img{
+
+  margin-left:2.5rem;
+  width:13rem;
+}
+
+aside > h3{
+
+  margin:0rem 0rem 1rem 2.5rem;
+}
+
+img + p{
+
+  margin:1rem 0rem 1rem 2.5rem;
+  font-size:0.85rem;
+  line-height:1.5;
+  border:solid;
+  border-color:#333333;
+  border-width:0rem 0rem 0.075rem 0rem;
+  padding-bottom:2.5rem;
+}
+
+.expand{
+    
+  display:block;
+  margin-top:0.75rem;
+  text-decoration:none;
+  font-size:0.005rem;
+  color:#333333;    
+}
+
+  /* footer */
+
+
+footer{
+
+  clear:both;
+  font-size:1rem;
+  font-family:'Roboto', sans-serif;
+  color:#282929;
+}
+
+p > a{
+
+  font-family:'Josefinslab', serif;
+  text-decoration:none;
+  color:#6e8a76;
+}
+
+.copyright{
+    
+    float:left;
+    width:20%;
+    text-align:left;
+}
+
+.image-links{  
+    
+    float:right;
+    width:50%;
+    text-align:right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
